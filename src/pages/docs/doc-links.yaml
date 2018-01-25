@@ -1,0 +1,44 @@
+- title: Quick Start
+  items:
+    - title: Getting Started
+      link: /docs/
+    - title: Procedural Modeling
+      link: /docs/procedural-model/
+    - title: Rigid Body Dynamics
+      link: /docs/rbd-sim/
+    - title: Particles
+      link: /docs/particles-sim/
+- title: Core Concepts
+  items:
+    - title: Node Graph
+      link: /docs/node-graph/
+    - title: Contexts
+      link: /docs/contexts/
+- title: Contexts
+  items:
+    - title: DOPS
+      link: /docs/dops/
+    - title: SOPS
+      link: /docs/sops/
+- title: Guides
+  items:
+    - title: Migrating from Maya
+      link: /docs/migrating-from-maya/
+    - title: Migrating from Cinema4D
+      link: /docs/migrating-from-c4d/
+- title: Reference
+  items:
+    - title: VEX Snippets
+      link: /docs/vex-snippets/
+    - title: VEX Functions
+      link: /docs/vex-functions/
+- title: Digital Assets
+  items:
+    - title: Download
+      link: /docs/da-download/
+    - title: Sharing
+      link: /docs/da-sharing/
+- title: Contributing
+  items:
+    - title: How to Contribute
+      link: /docs/how-to-contribute/
