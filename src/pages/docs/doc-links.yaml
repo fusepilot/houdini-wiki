@@ -28,6 +28,8 @@
       link: /docs/migrating-from-c4d/
 - title: Reference
   items:
+    - title: Math
+      link: /docs/math/
     - title: VEX Snippets
       link: /docs/vex-snippets/
     - title: VEX Functions

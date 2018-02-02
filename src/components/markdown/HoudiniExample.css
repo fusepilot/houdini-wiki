@@ -1,4 +1,5 @@
 .houdini-example {
+  margin-bottom: 4em;
 }
 
 .houdini-example header {
@@ -13,12 +14,12 @@
   margin-left: 1em;
 }
 
-.houdini-example header h2 {
+.houdini-example header h3 {
   margin-bottom: 0.5em;
   position: relative;
 }
 
-.houdini-example header h2::after {
+.houdini-example header h3::after {
   position: absolute;
   bottom: -8px;
   left: 0;

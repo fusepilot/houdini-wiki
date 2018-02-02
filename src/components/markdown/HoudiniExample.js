@@ -11,7 +11,7 @@ export default class HoudiniExample extends React.Component {
     return (
       <div className="houdini-example" style={style}>
         <header>
-          <h2>{this.props.title}</h2>
+          <h3>{this.props.title}</h3>
           <div className="meta">
             <span className="author">
               By <a href="">{this.props.author}</a>
