@@ -1,9 +1,22 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-import MarkdownPageFooter from "../components/markdown-page-footer"
+import MarkdownPageFooter from '../components/markdown-page-footer'
 
-import Container from "../components/container"
+import Container from '../components/container'
+
+import 'katex/dist/katex.min.css'
+
+import rehypeReact from 'rehype-react'
+import Counter from '../components/markdown/Counter'
+import HoudiniExample from '../components/markdown/HoudiniExample'
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: {
+    'interactive-counter': Counter,
+    'houdini-example': HoudiniExample,
+  },
+}).Compiler
 
 class DocsTemplate extends React.Component {
   render() {
@@ -26,6 +39,7 @@ class DocsTemplate extends React.Component {
             __html: page.html,
           }}
         />
+        {renderAst(page.htmlAst)}
         <MarkdownPageFooter page={page} />
       </Container>
     )
@@ -37,7 +51,7 @@ export default DocsTemplate
 export const pageQuery = graphql`
   query TemplateDocsMarkdown($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      htmlAst
       excerpt
       timeToRead
       frontmatter {
