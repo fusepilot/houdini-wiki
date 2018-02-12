@@ -1,6 +1,6 @@
-import presets, { colors } from "../utils/presets"
-import { rhythm, scale, options } from "../utils/typography"
-import { vP, vPHd, vPVHd, vPVVHd } from "../components/gutters"
+import presets, { colors } from '../utils/presets'
+import { rhythm, scale, options } from '../utils/typography'
+import { vP, vPHd, vPVHd, vPVVHd } from '../components/gutters'
 
 const vPOff = rhythm(presets.gutters.default - presets.logoOffset)
 const vPHdOff = rhythm(presets.gutters.HdR - presets.logoOffset)

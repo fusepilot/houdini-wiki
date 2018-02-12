@@ -1,6 +1,6 @@
-import React from "react"
-import presets, { colors } from "../utils/presets"
-import { scale, rhythm, options } from "../utils/typography"
+import React from 'react'
+import presets, { colors } from '../utils/presets'
+import { scale, rhythm, options } from '../utils/typography'
 
 const superHeaderTitles = [
   `Feature`,
@@ -16,7 +16,7 @@ const superHeader = () => (
       <td
         key={i}
         css={{
-          "&&": {
+          '&&': {
             padding: `${rhythm(1 / 2)} ${rhythm(1 / 2)} ${rhythm(3 / 8)}`,
           },
           display: `none`,
@@ -31,11 +31,11 @@ const superHeader = () => (
           // fontFamily: options.headerFontFamily.join(`,`),
           color: colors.gray.calm,
           background: colors.ui.whisper,
-          "&:first-child": {
+          '&:first-child': {
             borderTopLeftRadius: presets.radiusLg,
             textAlign: `left`,
           },
-          "&:last-child": {
+          '&:last-child': {
             borderTopRightRadius: presets.radiusLg,
           },
           [presets.Mobile]: {

@@ -1,7 +1,7 @@
-import typography, { rhythm, scale, options } from "../utils/typography"
-import presets from "../utils/presets"
-import { vP, vPHd, vPVHd, vPVVHd } from "../components/gutters"
-import { FormidableIcon, FabricIcon, SegmentIcon } from "../assets/logos"
+import typography, { rhythm, scale, options } from '../utils/typography'
+import presets from '../utils/presets'
+import { vP, vPHd, vPVHd, vPVVHd } from '../components/gutters'
+import { FormidableIcon, FabricIcon, SegmentIcon } from '../assets/logos'
 
 const Icon = ({ icon, alt, href }) => (
   <li
@@ -12,7 +12,7 @@ const Icon = ({ icon, alt, href }) => (
       [presets.Phablet]: {
         marginBottom: 0,
         width: `auto`,
-        ":last-child": {
+        ':last-child': {
           marginRight: 0,
         },
       },
@@ -29,10 +29,10 @@ const Icon = ({ icon, alt, href }) => (
           presets.animation.curveDefault
         }`,
         opacity: 0.9,
-        ":hover": {
+        ':hover': {
           opacity: 1,
         },
-        ":active": {
+        ':active': {
           opacity: 0.8,
         },
       }}

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const TechWithIcon = ({ icon, height, children }) => {
   let h = height ? height : `1.2em`

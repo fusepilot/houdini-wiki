@@ -1,14 +1,14 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from 'react'
+import Link from 'gatsby-link'
 
 import {
   BlogIcon,
   CommunityIcon,
   DocsIcon,
   TutorialIcon,
-} from "../assets/mobile-nav-icons"
-import presets, { colors } from "../utils/presets"
-import typography, { rhythm, scale, options } from "../utils/typography"
+} from '../assets/mobile-nav-icons'
+import presets, { colors } from '../utils/presets'
+import typography, { rhythm, scale, options } from '../utils/typography'
 
 const MobileNavItem = ({ linkTo, label, icon }) => (
   <Link

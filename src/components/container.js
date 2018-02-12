@@ -1,7 +1,7 @@
-import React from "react"
-import presets from "../utils/presets"
+import React from 'react'
+import presets from '../utils/presets'
 
-import { rhythm, scale, options } from "../utils/typography"
+import { rhythm, scale, options } from '../utils/typography'
 
 export default ({ children, className, hasSideBar = true, css = {} }) => (
   <div

@@ -1,8 +1,8 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from 'react'
+import Link from 'gatsby-link'
 
-import typography, { rhythm, scale, options } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
+import typography, { rhythm, scale, options } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
 
 const accentColor = colors.gatsby
 const listStyles = {
@@ -10,14 +10,14 @@ const listStyles = {
   margin: 0,
   padding: 0,
   fontFamily: typography.options.headerFontFamily.join(`,`),
-  "& li": {
+  '& li': {
     marginBottom: options.blockMarginBottom / 2,
     lineHeight: 1.3,
     paddingTop: rhythm(1 / 8),
     paddingBottom: rhythm(1 / 8),
-    "& .nav-link": {
+    '& .nav-link': {
       position: `relative`,
-      "&:before": {
+      '&:before': {
         content: ` `,
         height: 4,
         width: 4,
@@ -39,11 +39,11 @@ const listStyles = {
         },
       },
     },
-    "& .nav-link-active": {
+    '& .nav-link-active': {
       opacity: 1,
       color: accentColor,
       fontWeight: `600`,
-      "&:before": {
+      '&:before': {
         background: accentColor,
         transform: `scale(1)`,
       },
@@ -72,10 +72,10 @@ const Section = props => (
 const SectionLinks = props => {
   const tutorialStyles = props.isTutorial
     ? {
-        "&&": {
-          "& > li": {
+        '&&': {
+          '& > li': {
             marginBottom: `1rem`,
-            "& > .nav-link": {
+            '& > .nav-link': {
               fontWeight: `bold`,
             },
           },
@@ -87,7 +87,7 @@ const SectionLinks = props => {
     <ul
       css={{
         ...listStyles,
-        "& ul": {
+        '& ul': {
           ...listStyles,
         },
         ...tutorialStyles,
@@ -126,15 +126,15 @@ const SectionLink = props => {
   const isDraft = item.title.slice(-1) === `*`
   const title = isDraft ? item.title.slice(0, -1) : item.title
   const linkStyle = {
-    "&&": {
-      "& .nav-link": {
+    '&&': {
+      '& .nav-link': {
         borderBottom: `none`,
         boxShadow: `none`,
         color: isDraft ? colors.gray.calm : colors.gray.text,
         fontWeight: `normal`,
         fontStyle: isDraft ? `italic` : false,
       },
-      "& .nav-link-active": {
+      '& .nav-link-active': {
         color: accentColor,
         fontWeight: `bold`,
         fontStyle: isDraft ? `italic` : false,

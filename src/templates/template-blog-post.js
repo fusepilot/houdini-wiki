@@ -1,14 +1,14 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import ArrowForwardIcon from "react-icons/lib/md/arrow-forward"
-import ArrowBackIcon from "react-icons/lib/md/arrow-back"
-import Img from "gatsby-image"
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import ArrowForwardIcon from 'react-icons/lib/md/arrow-forward'
+import ArrowBackIcon from 'react-icons/lib/md/arrow-back'
+import Img from 'gatsby-image'
 
-import presets, { colors } from "../utils/presets"
-import typography, { rhythm, scale, options } from "../utils/typography"
-import Container from "../components/container"
-import EmailCaptureForm from "../components/email-capture-form"
+import presets, { colors } from '../utils/presets'
+import typography, { rhythm, scale, options } from '../utils/typography'
+import Container from '../components/container'
+import EmailCaptureForm from '../components/email-capture-form'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
     const prev = this.props.pathContext.prev
     const next = this.props.pathContext.next
     const prevNextLinkStyles = {
-      "&&": {
+      '&&': {
         boxShadow: `none`,
         borderBottom: 0,
         fontFamily: options.headerFontFamily.join(`,`),

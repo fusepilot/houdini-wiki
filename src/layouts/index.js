@@ -1,26 +1,26 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-import Navigation from "../components/navigation"
-import MobileNavigation from "../components/navigation-mobile"
-import SidebarBody from "../components/sidebar-body"
-import tutorialSidebar from "../pages/docs/tutorial-links.yml"
-import docsSidebar from "../pages/docs/doc-links.yaml"
-import featuresSidebar from "../pages/docs/features-links.yaml"
-import { rhythm, scale } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
-import hex2rgba from "hex2rgba"
-import "../css/prism-coy.css"
+import Navigation from '../components/navigation'
+import MobileNavigation from '../components/navigation-mobile'
+import SidebarBody from '../components/sidebar-body'
+import tutorialSidebar from '../pages/docs/tutorial-links.yml'
+import docsSidebar from '../pages/docs/doc-links.yaml'
+import featuresSidebar from '../pages/docs/features-links.yaml'
+import { rhythm, scale } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
+import hex2rgba from 'hex2rgba'
+import '../css/prism-coy.css'
 
 // Import Futura PT typeface
-import "../fonts/Webfonts/futurapt_book_macroman/stylesheet.css"
-import "../fonts/Webfonts/futurapt_bookitalic_macroman/stylesheet.css"
-import "../fonts/Webfonts/futurapt_demi_macroman/stylesheet.css"
-import "../fonts/Webfonts/futurapt_demiitalic_macroman/stylesheet.css"
+import '../fonts/Webfonts/futurapt_book_macroman/stylesheet.css'
+import '../fonts/Webfonts/futurapt_bookitalic_macroman/stylesheet.css'
+import '../fonts/Webfonts/futurapt_demi_macroman/stylesheet.css'
+import '../fonts/Webfonts/futurapt_demiitalic_macroman/stylesheet.css'
 
 // Other fonts
-import "typeface-spectral"
-import "typeface-space-mono"
+import 'typeface-spectral'
+import 'typeface-space-mono'
 
 class DefaultLayout extends React.Component {
   render() {
@@ -51,14 +51,14 @@ class DefaultLayout extends React.Component {
       overflowY: `auto`,
       height: `calc(100vh - ${presets.headerHeight} + 1px)`,
       WebkitOverflowScrolling: `touch`,
-      "::-webkit-scrollbar": {
+      '::-webkit-scrollbar': {
         width: `6px`,
         height: `6px`,
       },
-      "::-webkit-scrollbar-thumb": {
+      '::-webkit-scrollbar-thumb': {
         background: colors.ui.bright,
       },
-      "::-webkit-scrollbar-track": {
+      '::-webkit-scrollbar-track': {
         background: colors.ui.light,
       },
       [presets.Desktop]: {

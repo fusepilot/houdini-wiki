@@ -1,8 +1,8 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
-import Container from "../components/container"
+import Container from '../components/container'
 
 export default () => (
   <Container>

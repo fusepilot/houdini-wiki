@@ -1,21 +1,21 @@
-import React from "react"
-import { css } from "glamor"
+import React from 'react'
+import { css } from 'glamor'
 
-import { rhythm, scale, options } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
-import logo from "../monogram.svg"
-import { GraphQLIcon, ReactJSIcon } from "../assets/logos"
-import { vP, vPHd, vPVHd, vPVVHd } from "../components/gutters"
-import FuturaParagraph from "../components/futura-paragraph"
-import TechWithIcon from "../components/tech-with-icon"
+import { rhythm, scale, options } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
+import logo from '../monogram.svg'
+import { GraphQLIcon, ReactJSIcon } from '../assets/logos'
+import { vP, vPHd, vPVHd, vPVVHd } from '../components/gutters'
+import FuturaParagraph from '../components/futura-paragraph'
+import TechWithIcon from '../components/tech-with-icon'
 
 const stripeColor = `255, 255, 255, 0.9`
 const stripeSize = 15
 const stripeAnimation = css.keyframes({
-  "0%": {
+  '0%': {
     backgroundPosition: `${rhythm(stripeSize)} ${rhythm(stripeSize * 2)}`,
   },
-  "100%": { backgroundPosition: `0 0` },
+  '100%': { backgroundPosition: `0 0` },
 })
 const stripeBg = {
   backgroundColor: colors.ui.whisper,

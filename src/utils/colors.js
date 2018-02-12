@@ -1,4 +1,4 @@
-import gray from "gray-percentage"
+import gray from 'gray-percentage'
 
 const colorStr = `
 #281505

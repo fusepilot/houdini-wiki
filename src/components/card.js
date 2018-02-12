@@ -1,6 +1,6 @@
-import presets, { colors } from "../utils/presets"
-import { rhythm, scale, options } from "../utils/typography"
-import { vP, vPHd, vPVHd, vPVVHd } from "../components/gutters"
+import presets, { colors } from '../utils/presets'
+import { rhythm, scale, options } from '../utils/typography'
+import { vP, vPHd, vPVHd, vPVVHd } from '../components/gutters'
 
 const Card = ({ children }) => (
   <div
@@ -12,10 +12,10 @@ const Card = ({ children }) => (
         flex: `0 0 50%`,
         maxWidth: `50%`,
         boxShadow: `0 1px 0 0 ${colors.ui.light}`,
-        "&:nth-child(5),&:nth-child(6)": {
+        '&:nth-child(5),&:nth-child(6)': {
           boxShadow: `none`,
         },
-        "&:nth-child(2n)": {
+        '&:nth-child(2n)': {
           borderLeft: `1px solid ${colors.ui.light}`,
         },
       },
@@ -23,10 +23,10 @@ const Card = ({ children }) => (
         flex: `0 0 33.33333333%`,
         maxWidth: `33.33333333%`,
         borderLeft: `1px solid ${colors.ui.light}`,
-        "&:nth-child(4)": {
+        '&:nth-child(4)': {
           boxShadow: `none`,
         },
-        "&:nth-child(3n+1)": {
+        '&:nth-child(3n+1)': {
           borderLeft: 0,
         },
       },

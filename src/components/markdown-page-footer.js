@@ -1,11 +1,11 @@
-import React from "react"
-import EditIcon from "react-icons/lib/md/create"
-import CheckIcon from "react-icons/lib/md/thumb-up"
-import CrossIcon from "react-icons/lib/md/thumb-down"
-import { GraphQLClient } from "graphql-request"
+import React from 'react'
+import EditIcon from 'react-icons/lib/md/create'
+import CheckIcon from 'react-icons/lib/md/thumb-up'
+import CrossIcon from 'react-icons/lib/md/thumb-down'
+import { GraphQLClient } from 'graphql-request'
 
-import { rhythm, scale } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
+import { rhythm, scale } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
 
 const client = new GraphQLClient(
   `https://api.graph.cool/relay/v1/cj8xuo77f0a3a0164y7jketkr`
@@ -74,17 +74,17 @@ export default class MarkdownPageFooter extends React.Component {
         )}
         <a
           css={{
-            "&&": {
+            '&&': {
               float: `right`,
               display: `block`,
               color: colors.gray.calm,
               fontSize: scale(-1 / 5).fontSize,
-              fontWeight: "normal",
+              fontWeight: 'normal',
               border: `none`,
               boxShadow: `none`,
               padding: rhythm(1 / 2),
-              "&:hover": {
-                background: "transparent",
+              '&:hover': {
+                background: 'transparent',
                 color: colors.gatsby,
               },
             },

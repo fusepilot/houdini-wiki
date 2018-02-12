@@ -3,6 +3,21 @@
   "description": "Houdini Wiki",
   "version": "1.0.0",
   "author": "Michael Delaney <michael@fusepilot.com>",
+  "license": "MIT",
+  "main": "n/a",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/*/*.{js,json,css}'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
+  },
   "dependencies": {
     "bluebird": "^3.5.1",
     "email-validator": "^1.1.1",
@@ -42,11 +57,14 @@
     "graphql-request": "^1.4.0",
     "gray-percentage": "^2.0.0",
     "hex2rgba": "^0.0.1",
+    "husky": "^0.14.3",
     "jsonp": "^0.2.1",
     "limax": "^1.5.0",
+    "lint-staged": "^6.1.0",
     "lodash": "^4.16.6",
     "mitt": "^1.1.2",
     "parse-filepath": "^1.0.1",
+    "prettier": "^1.10.2",
     "react-icons": "^2.2.7",
     "rehype-react": "^3.0.2",
     "slash": "^1.0.0",
@@ -55,15 +73,5 @@
     "typography-breakpoint-constants": "^0.15.10",
     "typography-plugin-code": "^0.16.11",
     "validator": "^9.2.0"
-  },
-  "license": "MIT",
-  "main": "n/a",
-  "private": true,
-  "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

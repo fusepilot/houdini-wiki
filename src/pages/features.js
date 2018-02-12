@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import Helmet from "react-helmet"
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
-import EvaluationTable from "../components/evaluation-table"
-import EvaluationCell from "../components/evaluation-cell"
-import FuturaParagraph from "../components/futura-paragraph"
-import Container from "../components/container"
-import { options, rhythm } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
+import EvaluationTable from '../components/evaluation-table'
+import EvaluationCell from '../components/evaluation-cell'
+import FuturaParagraph from '../components/futura-paragraph'
+import Container from '../components/container'
+import { options, rhythm } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
 
 const legendBorderColor = colors.ui.light
 

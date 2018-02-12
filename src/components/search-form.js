@@ -1,11 +1,11 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { navigateTo } from "gatsby-link"
-import { rhythm } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
-import hex2rgba from "hex2rgba"
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { navigateTo } from 'gatsby-link'
+import { rhythm } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
+import hex2rgba from 'hex2rgba'
 
-import { css } from "glamor"
+import { css } from 'glamor'
 
 // Override default search result styles (docsearch.css)
 css.insert(`
@@ -325,7 +325,7 @@ class SearchForm extends Component {
             width: rhythm(1),
             transition: `width 0.2s ease`,
 
-            ":focus": {
+            ':focus': {
               outline: 0,
               backgroundColor: colors.ui.light,
               borderRadius: presets.radiusLg,

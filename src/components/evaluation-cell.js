@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { rhythm } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
+import React, { Component } from 'react'
+import { rhythm } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
 
 class EvaluationCell extends Component {
   render() {

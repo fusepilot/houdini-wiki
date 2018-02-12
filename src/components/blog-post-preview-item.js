@@ -1,9 +1,9 @@
-import React from "react"
-import Link from "gatsby-link"
-import Img from "gatsby-image"
+import React from 'react'
+import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
-import typography, { rhythm, scale } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
+import typography, { rhythm, scale } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
 
 class BlogPostPreviewItem extends React.Component {
   render() {
@@ -58,9 +58,9 @@ class BlogPostPreviewItem extends React.Component {
                   borderBottom: `0 !important`,
                   position: `relative`,
                   zIndex: 1,
-                  "&&": {
+                  '&&': {
                     fontWeight: `normal`,
-                    ":hover": {
+                    ':hover': {
                       color: colors.gatsby,
                       background: `transparent`,
                     },
@@ -88,10 +88,10 @@ class BlogPostPreviewItem extends React.Component {
             textIndent: `-100%`,
             whiteSpace: `nowrap`,
             zIndex: 0,
-            "&&": {
+            '&&': {
               border: 0,
               boxShadow: `none`,
-              "&:hover": {
+              '&:hover': {
                 background: `none`,
               },
             },

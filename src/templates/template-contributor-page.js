@@ -1,10 +1,10 @@
-import React from "react"
-import Img from "gatsby-image"
+import React from 'react'
+import Img from 'gatsby-image'
 
-import Container from "../components/container"
-import BlogPostPreviewItem from "../components/blog-post-preview-item"
-import typography, { rhythm, scale, options } from "../utils/typography"
-import presets from "../utils/presets"
+import Container from '../components/container'
+import BlogPostPreviewItem from '../components/blog-post-preview-item'
+import typography, { rhythm, scale, options } from '../utils/typography'
+import presets from '../utils/presets'
 
 class ContributorPageTemplate extends React.Component {
   render() {

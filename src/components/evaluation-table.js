@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import presets, { colors } from "../utils/presets"
-import EvaluationCell from "./evaluation-cell"
-import Link from "gatsby-link"
-import infoIcon from "../assets/info-icon.svg"
-import SectionTitle from "./evaluation-table-section-title"
-import SectionHeaderTop from "./evaluation-table-section-header-top"
-import SectionHeaderBottom from "./evaluation-table-section-header-bottom"
-import { options, rhythm } from "../utils/typography"
+import React, { Component } from 'react'
+import presets, { colors } from '../utils/presets'
+import EvaluationCell from './evaluation-cell'
+import Link from 'gatsby-link'
+import infoIcon from '../assets/info-icon.svg'
+import SectionTitle from './evaluation-table-section-title'
+import SectionHeaderTop from './evaluation-table-section-header-top'
+import SectionHeaderBottom from './evaluation-table-section-header-bottom'
+import { options, rhythm } from '../utils/typography'
 
 class EvaluationTable extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class EvaluationTable extends Component {
             // hyphens: `auto`,
             // wordBreak: `break-all`,
             // display: `inline-block`,
-            "&:hover": {
+            '&:hover': {
               background: colors.ui.bright,
             },
           }}
@@ -65,7 +65,7 @@ class EvaluationTable extends Component {
             >
               <a
                 css={{
-                  "&&": {
+                  '&&': {
                     fontWeight: `normal`,
                     borderBottom: 0,
                   },
@@ -129,7 +129,7 @@ class EvaluationTable extends Component {
                           key={j}
                           css={{
                             display: `table-cell`,
-                            "&:hover": {
+                            '&:hover': {
                               cursor: j >= 0 ? `pointer` : `inherit`,
                             },
                             borderBottom: !showTooltip(s, i)
@@ -162,7 +162,7 @@ class EvaluationTable extends Component {
                         css={{
                           fontFamily: options.headerFontFamily.join(`,`),
                           paddingBottom: `calc(${rhythm(1)} - 1px)`,
-                          "&&": {
+                          '&&': {
                             paddingRight: `${rhythm(1 / 4)}`,
                             paddingLeft: `${rhythm(1 / 4)}`,
                             [presets.Mobile]: {

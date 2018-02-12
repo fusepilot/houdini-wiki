@@ -1,14 +1,14 @@
-import React from "react"
-import { rhythm, options } from "../utils/typography"
-import presets, { colors } from "../utils/presets"
-import jsonp from "jsonp"
-import { validate } from "email-validator"
-import { css } from "glamor"
-import hex2rgba from "hex2rgba"
+import React from 'react'
+import { rhythm, options } from '../utils/typography'
+import presets, { colors } from '../utils/presets'
+import jsonp from 'jsonp'
+import { validate } from 'email-validator'
+import { css } from 'glamor'
+import hex2rgba from 'hex2rgba'
 
 let stripeAnimation = css.keyframes({
-  "0%": { backgroundPosition: `0 0` },
-  "100%": { backgroundPosition: `30px 60px` },
+  '0%': { backgroundPosition: `0 0` },
+  '100%': { backgroundPosition: `30px 60px` },
 })
 
 const formInputDefaultStyles = {
@@ -22,7 +22,7 @@ const formInputDefaultStyles = {
   transition: `all ${presets.animation.speedDefault} ${
     presets.animation.curveDefault
   }`,
-  "::placeholder": {
+  '::placeholder': {
     color: colors.lilac,
     opacity: 1,
   },
@@ -137,7 +137,7 @@ class EmailCaptureForm extends React.Component {
                   css={{
                     ...formInputDefaultStyles,
                     width: `250px`,
-                    ":focus": {
+                    ':focus': {
                       borderColor: colors.gatsby,
                       outline: 0,
                       boxShadow: `0 0 0 0.2rem ${hex2rgba(colors.lilac, 0.25)}`,
@@ -154,14 +154,14 @@ class EmailCaptureForm extends React.Component {
                     cursor: `pointer`,
                     fontWeight: `bold`,
                     marginLeft: rhythm(1 / 2),
-                    ":hover, &:focus": {
+                    ':hover, &:focus': {
                       backgroundSize: `30px 30px`,
                       backgroundColor: colors.gatsby,
                       backgroundImage: `linear-gradient(45deg, rgba(0,0,0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0,0,0, 0.1) 50%, rgba(0,0,0, 0.1) 75%, transparent 75%, transparent)`,
                       color: `#fff`,
                       animation: `${stripeAnimation} 2.8s linear infinite`,
                     },
-                    ":focus": {
+                    ':focus': {
                       outline: 0,
                       boxShadow: `0 0 0 0.2rem ${hex2rgba(colors.lilac, 0.25)}`,
                     },

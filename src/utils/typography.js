@@ -1,12 +1,12 @@
-import Typography from "typography"
-import CodePlugin from "typography-plugin-code"
-import presets, { colors } from "./presets"
+import Typography from 'typography'
+import CodePlugin from 'typography-plugin-code'
+import presets, { colors } from './presets'
 import {
   MOBILE_MEDIA_QUERY,
   TABLET_MEDIA_QUERY,
   MIN_DEFAULT_MEDIA_QUERY,
   MIN_LARGER_DISPLAY_MEDIA_QUERY,
-} from "typography-breakpoint-constants"
+} from 'typography-breakpoint-constants'
 
 const options = {
   headerFontFamily: [
@@ -45,12 +45,12 @@ const options = {
   plugins: [new CodePlugin()],
   overrideStyles: ({ rhythm, scale }, options) => {
     return {
-      "h1,h2,h4,h5,h6": {
+      'h1,h2,h4,h5,h6': {
         marginTop: rhythm(options.blockMarginBottom * 2),
         marginBottom: rhythm(options.blockMarginBottom),
         letterSpacing: `-0.0075em`,
       },
-      "ul, ol": {
+      'ul, ol': {
         marginTop: rhythm(options.blockMarginBottom),
       },
       h1: {
@@ -78,7 +78,7 @@ const options = {
       hr: {
         backgroundColor: colors.ui.light,
       },
-      "tt,code": {
+      'tt,code': {
         // background: `hsla(23, 60%, 97%, 1)`,
         background: colors.a[0],
         fontFamily: options.monospaceFontFamily.join(`,`),
@@ -90,7 +90,7 @@ const options = {
         paddingTop: `0.1em`,
         paddingBottom: `0.1em`,
       },
-      ".gatsby-highlight": {
+      '.gatsby-highlight': {
         //background: colors.a[0],
         background: `#fdfaf6`,
         //boxShadow: `inset 0 0 0 1px ${colors.a[1]}`,
@@ -112,12 +112,12 @@ const options = {
         minWidth: `100%`,
         overflow: `initial`,
       },
-      ".gatsby-highlight pre code": {
+      '.gatsby-highlight pre code': {
         display: `block`,
         fontSize: `95%`,
         lineHeight: options.baseLineHeight,
       },
-      ".gatsby-highlight-code-line": {
+      '.gatsby-highlight-code-line': {
         //background: colors.a[1],
         background: `#faede5`,
         marginRight: `${rhythm(-options.blockMarginBottom)}`,
@@ -129,20 +129,20 @@ const options = {
         }`,
         display: `block`,
       },
-      ".gatsby-highlight::-webkit-scrollbar": {
+      '.gatsby-highlight::-webkit-scrollbar': {
         width: `6px`,
         height: `6px`,
       },
-      ".gatsby-highlight::-webkit-scrollbar-thumb": {
+      '.gatsby-highlight::-webkit-scrollbar-thumb': {
         background: colors.a[2],
       },
-      ".gatsby-highlight::-webkit-scrollbar-track": {
+      '.gatsby-highlight::-webkit-scrollbar-track': {
         //background: colors.a[1],
         background: `#faede5`,
         borderRadius: `0 0 ${presets.radiusLg}px ${presets.radiusLg}px`,
       },
       // Target image captions. This is kind of a fragile selector...
-      ".gatsby-resp-image-link + em": {
+      '.gatsby-resp-image-link + em': {
         ...scale(-1 / 5),
         lineHeight: 1.3,
         paddingTop: rhythm(3 / 8),
@@ -153,12 +153,12 @@ const options = {
         color: colors.gray.calm,
         position: `relative`,
       },
-      ".gatsby-resp-image-link + em a": {
+      '.gatsby-resp-image-link + em a': {
         fontWeight: `normal`,
         fontFamily: options.headerFontFamily.join(`,`),
         color: colors.gatsby,
       },
-      ".main-body a": {
+      '.main-body a': {
         color: `inherit`,
         textDecoration: `none`,
         transition: `all ${presets.animation.speedFast} ${
@@ -169,54 +169,54 @@ const options = {
         fontFamily: options.headerFontFamily.join(`,`),
         fontWeight: `bold`,
       },
-      ".post-body a": {
+      '.post-body a': {
         fontSize: `102%`,
         color: colors.gatsby,
       },
-      ".main-body a:hover": {
+      '.main-body a:hover': {
         background: colors.ui.bright,
       },
-      ".main-body a.anchor": {
+      '.main-body a.anchor': {
         color: `inherit`,
         fill: colors.gatsby,
         textDecoration: `none`,
         borderBottom: `none`,
         boxShadow: `none`,
       },
-      ".main-body a.anchor:hover": {
+      '.main-body a.anchor:hover': {
         background: `none`,
       },
-      ".main-body a.gatsby-resp-image-link": {
+      '.main-body a.gatsby-resp-image-link': {
         boxShadow: `none`,
         borderBottom: `transparent`,
         marginTop: rhythm(options.blockMarginBottom * 2),
         marginBottom: rhythm(options.blockMarginBottom * 2),
       },
-      ".main-body a.gatsby-resp-image-link:hover": {
+      '.main-body a.gatsby-resp-image-link:hover': {
         background: `none`,
         boxShadow: `none`,
       },
-      ".gatsby-highlight, .post .gatsby-resp-iframe-wrapper, .post .gatsby-resp-image-link": {
+      '.gatsby-highlight, .post .gatsby-resp-iframe-wrapper, .post .gatsby-resp-image-link': {
         marginLeft: rhythm(-options.blockMarginBottom),
         marginRight: rhythm(-options.blockMarginBottom),
       },
-      ".gatsby-resp-image-link": {
+      '.gatsby-resp-image-link': {
         borderRadius: `${presets.radius}px`,
         overflow: `hidden`,
       },
-      "@media (max-width:634px)": {
-        ".gatsby-highlight, .gatsby-resp-image-link": {
+      '@media (max-width:634px)': {
+        '.gatsby-highlight, .gatsby-resp-image-link': {
           borderRadius: 0,
           borderLeft: 0,
           borderRight: 0,
         },
-        ".gatsby-highlight": {
+        '.gatsby-highlight': {
           //boxShadow: `inset 0 1px 0 0 ${colors.a[1]}, inset 0 -1px 0 0 ${colors.a[1]}`,
           boxShadow: `inset 0 1px 0 0 #faede5, inset 0 -1px 0 0 #faede5`,
         },
       },
       [`${presets.Tablet} and (max-width:980px)`]: {
-        ".has-sidebar .gatsby-highlight": {
+        '.has-sidebar .gatsby-highlight': {
           marginLeft: 0,
           marginRight: 0,
         },
@@ -225,7 +225,7 @@ const options = {
         width: `100%`,
         marginBottom: rhythm(options.blockMarginBottom),
       },
-      ".twitter-tweet-rendered": {
+      '.twitter-tweet-rendered': {
         margin: `${rhythm(options.blockMarginBottom * 2)} auto !important`,
       },
       [MOBILE_MEDIA_QUERY]: {
@@ -240,15 +240,15 @@ const options = {
         },
       },
       [MIN_DEFAULT_MEDIA_QUERY]: {
-        ".gatsby-highlight, .post .gatsby-resp-iframe-wrapper, .post .gatsby-resp-image-link": {
+        '.gatsby-highlight, .post .gatsby-resp-iframe-wrapper, .post .gatsby-resp-image-link': {
           marginLeft: rhythm(-options.blockMarginBottom * 1.5),
           marginRight: rhythm(-options.blockMarginBottom * 1.5),
         },
-        ".gatsby-highlight": {
+        '.gatsby-highlight': {
           padding: rhythm(options.blockMarginBottom * 1.5),
           marginBottom: rhythm(options.blockMarginBottom * 1.5),
         },
-        ".gatsby-highlight-code-line": {
+        '.gatsby-highlight-code-line': {
           marginRight: `${rhythm(-options.blockMarginBottom * 1.5)}`,
           marginLeft: `${rhythm(-options.blockMarginBottom * 1.5)}`,
           paddingRight: rhythm(options.blockMarginBottom * 1.5),
@@ -261,28 +261,28 @@ const options = {
           fontSize: `${21 / 16 * 100}%`,
         },
       },
-      ".token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata": {
+      '.token.comment,.token.block-comment,.token.prolog,.token.doctype,.token.cdata': {
         // color: `#52ad9f`,
         color: colors.c[8],
       },
-      ".token.punctuation": {
+      '.token.punctuation': {
         // color: `#5F6364`,
         // color: `blue`,
         color: colors.c[12],
       },
-      ".token.property,.token.tag,.token.boolean,.token.number,.token.function-name,.token.constant,.token.symbol,.token.deleted": {
+      '.token.property,.token.tag,.token.boolean,.token.number,.token.function-name,.token.constant,.token.symbol,.token.deleted': {
         // color: `#a285d8`,
         color: colors.b[9],
       },
-      ".token.selector,.token.attr-name,.token.string,.token.char,.token.function,.token.builtin,.token.inserted": {
+      '.token.selector,.token.attr-name,.token.string,.token.char,.token.function,.token.builtin,.token.inserted': {
         // color: `#a2466c`,
         color: colors.a[9],
       },
-      ".token.operator, .token.entity, .token.url, .token.variable": {
+      '.token.operator, .token.entity, .token.url, .token.variable': {
         // color: `#c18b99`,
         // color: `blue`,
       },
-      ".token.atrule, .token.attr-value, .token.keyword, .token.class-name": {
+      '.token.atrule, .token.attr-value, .token.keyword, .token.class-name': {
         // color: `#a285d8`,
         // color: `blue`,
         color: colors.b[8],
