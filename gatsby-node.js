@@ -9,7 +9,9 @@ const slugify = require(`limax`)
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
-    const docsTemplate = path.resolve(`src/templates/template-docs-markdown.js`)
+    const contentTemplate = path.resolve(
+      `src/templates/template-content-markdown.js`
+    )
     const blogPostTemplate = path.resolve(`src/templates/template-blog-post.js`)
     const contributorPageTemplate = path.resolve(
       `src/templates/template-contributor-page.js`
@@ -94,7 +96,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           })
         })
 
-        // Create docs pages.
+        // Create content pages.
         result.data.allMarkdownRemark.edges.forEach(edge => {
           const slug = _.get(edge, `node.fields.slug`)
           if (!slug) return
@@ -102,7 +104,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           if (!_.includes(slug, `/blog/`)) {
             createPage({
               path: `${edge.node.fields.slug}`, // required
-              component: slash(docsTemplate),
+              component: slash(contentTemplate),
               context: {
                 slug: edge.node.fields.slug,
               },
@@ -122,7 +124,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   let slug
   if (node.internal.type === `File`) {
     const parsedFilePath = parseFilepath(node.relativePath)
-    if (node.sourceInstanceName === `docs`) {
+    if (node.sourceInstanceName === `content`) {
       if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
         slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
       } else if (parsedFilePath.dir === ``) {
@@ -140,8 +142,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   ) {
     const fileNode = getNode(node.parent)
     const parsedFilePath = parseFilepath(fileNode.relativePath)
-    // Add slugs for docs pages
-    if (fileNode.sourceInstanceName === `docs`) {
+    // Add slugs for content pages
+    if (fileNode.sourceInstanceName === `content`) {
       if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
         slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
       } else if (parsedFilePath.dir === ``) {
@@ -162,7 +164,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
 exports.onPostBuild = () => {
   fs.copySync(
-    `../docs/blog/2017-02-21-1-0-progress-update-where-came-from-where-going/gatsbygram.mp4`,
+    `../content/blog/2017-02-21-1-0-progress-update-where-came-from-where-going/gatsbygram.mp4`,
     `./public/gatsbygram.mp4`
   )
 }

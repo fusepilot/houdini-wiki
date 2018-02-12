@@ -1,22 +1,22 @@
-import React from "react"
-import Link from "gatsby-link"
+import React from 'react'
+import Link from 'gatsby-link'
 
-import presets, { colors } from "../utils/presets"
-import { rhythm, scale, options } from "../utils/typography"
-import { JSIcon, WebpackIcon, ReactJSIcon, GraphQLIcon } from "../assets/logos"
-import { vP, vPHd, vPVHd, vPVVHd } from "../components/gutters"
-import Container from "../components/container"
-import MastheadContent from "../components/masthead"
-import MastheadBg from "../components/masthead-bg"
-import UsedBy from "../components/used-by"
-import Cards from "../components/cards"
-import Card from "../components/card"
-import CardHeadline from "../components/card-headline"
-import Diagram from "../components/diagram"
-import BlogPostPreviewItem from "../components/blog-post-preview-item"
-import FuturaParagraph from "../components/futura-paragraph"
-import CtaButton from "../components/cta-button"
-import TechWithIcon from "../components/tech-with-icon"
+import presets, { colors } from '../utils/presets'
+import { rhythm, scale, options } from '../utils/typography'
+import { JSIcon, WebpackIcon, ReactJSIcon, GraphQLIcon } from '../assets/logos'
+import { vP, vPHd, vPVHd, vPVVHd } from '../components/gutters'
+import Container from '../components/container'
+import MastheadContent from '../components/masthead'
+import MastheadBg from '../components/masthead-bg'
+import UsedBy from '../components/used-by'
+import Cards from '../components/cards'
+import Card from '../components/card'
+import CardHeadline from '../components/card-headline'
+import Diagram from '../components/diagram'
+import BlogPostPreviewItem from '../components/blog-post-preview-item'
+import FuturaParagraph from '../components/futura-paragraph'
+import CtaButton from '../components/cta-button'
+import TechWithIcon from '../components/tech-with-icon'
 
 class IndexRoute extends React.Component {
   render() {
@@ -213,7 +213,7 @@ export const pageQuery = graphql`
       limit: 3
       filter: {
         frontmatter: { draft: { ne: true } }
-        fileAbsolutePath: { regex: "/docs.blog/" }
+        fileAbsolutePath: { regex: "/content.blog/" }
       }
     ) {
       edges {

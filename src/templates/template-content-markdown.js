@@ -18,7 +18,7 @@ const renderAst = new rehypeReact({
   },
 }).Compiler
 
-class DocsTemplate extends React.Component {
+class ContentTemplate extends React.Component {
   render() {
     const page = this.props.data.markdownRemark
     return (
@@ -46,7 +46,7 @@ class DocsTemplate extends React.Component {
   }
 }
 
-export default DocsTemplate
+export default ContentTemplate
 
 export const pageQuery = graphql`
   query TemplateDocsMarkdown($slug: String!) {

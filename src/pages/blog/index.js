@@ -1,12 +1,12 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-import Container from "../../components/container"
-import BlogPostPreviewItem from "../../components/blog-post-preview-item"
+import Container from '../../components/container'
+import BlogPostPreviewItem from '../../components/blog-post-preview-item'
 
-import presets, { colors } from "../../utils/presets"
-import { rhythm, scale, options } from "../../utils/typography"
-import logo from "../../monogram.svg"
+import presets, { colors } from '../../utils/presets'
+import { rhythm, scale, options } from '../../utils/typography'
+import logo from '../../monogram.svg'
 
 class BlogPostsIndex extends React.Component {
   render() {
@@ -77,11 +77,11 @@ class BlogPostsIndex extends React.Component {
                   }, padding ${presets.animation.speedDefault} ${
                     presets.animation.curveDefault
                   }`,
-                  "&:hover": {
+                  '&:hover': {
                     transform: `translateY(-4px)`,
                     boxShadow: `0 10px 42px rgba(25, 17, 34, 0.1)`,
                   },
-                  "&:active": {
+                  '&:active': {
                     boxShadow: `0 3px 10px rgba(25, 17, 34, 0.05)`,
                     transform: `translateY(0)`,
                     transition: `transform 50ms`,
@@ -106,7 +106,7 @@ export const pageQuery = graphql`
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: { draft: { ne: true } }
-        fileAbsolutePath: { regex: "/docs.blog/" }
+        fileAbsolutePath: { regex: "/content.blog/" }
       }
     ) {
       edges {
